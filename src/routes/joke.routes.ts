@@ -4,7 +4,7 @@ import { getJokes, createJoke, getJokeById, updateJoke, deleteJoke } from '../co
 const router = Router();
 
 router.get('/', getJokes);
-router.post('/', createJoke);
+router.post('/', createJoke); // ! from frontend
 router.get('/:id', getJokeById);
 router.put('/:id', updateJoke);
 router.delete('/:id', deleteJoke);

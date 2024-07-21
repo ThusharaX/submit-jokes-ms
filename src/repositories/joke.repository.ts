@@ -1,7 +1,7 @@
 import Joke from '../models/joke.model';
 
 const getJokes = async () => {
-  return await Joke.find().populate('type', 'name');
+  return await Joke.find();
 };
 
 const createJoke = async (data: { setup: string; punchline: string; type: string; author: string }) => {
@@ -10,7 +10,7 @@ const createJoke = async (data: { setup: string; punchline: string; type: string
 };
 
 const getJokeById = async (id: string) => {
-  return await Joke.findById(id).populate('type', 'name');
+  return await Joke.findById(id);
 };
 
 const updateJoke = async (id: string, data: Partial<{ setup: string; punchline: string; type: string; author: string }>) => {

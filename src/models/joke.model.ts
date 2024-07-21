@@ -3,7 +3,7 @@ import { Schema, model, Document } from 'mongoose';
 interface IJoke extends Document {
   setup: string;
   punchline: string;
-  type: Schema.Types.ObjectId;
+  type: string;
   author: string;
 }
 
@@ -18,8 +18,7 @@ const jokeSchema = new Schema<IJoke>(
       required: true,
     },
     type: {
-      type: Schema.Types.ObjectId,
-      ref: 'JokeType',
+      type: String,
       required: true,
     },
     author: {
