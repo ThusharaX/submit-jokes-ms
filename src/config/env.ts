@@ -8,4 +8,5 @@ export const envs = {
   MONGO_URI: get('MONGO_URI').required().asString(),
   LOCAL_DOMAIN: get('LOCAL_DOMAIN').required().asString(),
   PROD_DOMAIN: get('PROD_DOMAIN').required().asString(),
+  BACKEND_DOMAIN: get('BACKEND_DOMAIN').required().asString(),
 };
