@@ -22,7 +22,7 @@ if (envs.NODE_ENV !== 'production') {
   app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 }
 
-app.use(`${envs.API_PREFIX}/jokes`, jokeRoutes);
-app.use(`${envs.API_PREFIX}/joke-types`, jokeTypeRoutes);
+app.use('/jokes', jokeRoutes);
+app.use('/joke-types', jokeTypeRoutes);
 
 export default app;
