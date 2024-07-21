@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { envs } from '../config/env';
+import axios from "axios";
+import { envs } from "../config/env";
 
 const getJokeTypesService = async () => {
   const url = `${envs.BACKEND_DOMAIN}/deliver/joke-types`;

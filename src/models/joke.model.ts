@@ -1,4 +1,4 @@
-import { Schema, model, Document } from 'mongoose';
+import { Schema, model, Document } from "mongoose";
 
 interface IJoke extends Document {
   setup: string;
@@ -26,9 +26,9 @@ const jokeSchema = new Schema<IJoke>(
       required: true,
     },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
-const Joke = model<IJoke>('Joke', jokeSchema);
+const Joke = model<IJoke>("Joke", jokeSchema);
 
 export default Joke;

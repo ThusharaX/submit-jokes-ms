@@ -1,5 +1,5 @@
-import { Request, Response } from 'express';
-import { getJokeTypesService } from '../services/jokeType.service';
+import { Request, Response } from "express";
+import { getJokeTypesService } from "../services/jokeType.service";
 
 const getJokeTypes = async (req: Request, res: Response) => {
   try {
