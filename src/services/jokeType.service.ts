@@ -1,23 +1,9 @@
-import { getJokeTypes, createJokeType, getJokeTypeById, updateJokeType, deleteJokeType } from '../repositories/jokeType.repository';
+import axios from 'axios';
 
 const getJokeTypesService = async () => {
-  return await getJokeTypes();
+  const url = 'http://localhost:3003/joke-types';
+  const response = await axios.get(url);
+  return response.data;
 };
 
-const createJokeTypeService = async (data: { name: string }) => {
-  return await createJokeType(data);
-};
-
-const getJokeTypeByIdService = async (id: string) => {
-  return await getJokeTypeById(id);
-};
-
-const updateJokeTypeService = async (id: string, data: Partial<{ name: string }>) => {
-  return await updateJokeType(id, data);
-};
-
-const deleteJokeTypeService = async (id: string) => {
-  return await deleteJokeType(id);
-};
-
-export { getJokeTypesService, createJokeTypeService, getJokeTypeByIdService, updateJokeTypeService, deleteJokeTypeService };
+export { getJokeTypesService };
