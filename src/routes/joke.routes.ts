@@ -6,7 +6,7 @@ const router = Router();
 router.get('/', getJokes);
 router.post('/', createJoke); // ! from frontend
 router.get('/:id', getJokeById);
-router.put('/:id', updateJoke);
+router.patch('/:id', updateJoke);
 router.delete('/:id', deleteJoke);
 
 export default router;
