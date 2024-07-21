@@ -3,6 +3,7 @@ import { get } from 'env-var';
 
 export const envs = {
   PORT: get('PORT').required().asPortNumber(),
+  DEFAULT_API_PREFIX: get('DEFAULT_API_PREFIX').required().asString(),
   NODE_ENV: get('NODE_ENV').default('development').asString(),
   MONGO_URI: get('MONGO_URI').required().asString(),
   LOCAL_DOMAIN: get('LOCAL_DOMAIN').required().asString(),
